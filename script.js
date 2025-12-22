@@ -209,7 +209,7 @@ document.getElementById('rsvpForm').addEventListener('submit', function (e) {
     const status = document.getElementById('kehadiran').value;
     const message = document.getElementById('pesan').value;
 
-    const url = `https://script.google.com/macros/s/AKfycbwfGnXzkMj9US_JmuRRXDkYXXNUDOYdLMlDAo4uMVVfKLGbbiKgJVHjGN351LtFdRlv0Q/exec?name=${encodeURIComponent(name)}&jumlah=${encodeURIComponent(jumlahOrang)}&status=${encodeURIComponent(status)}&message=${encodeURIComponent(message)}`;
+    const url = `https://script.google.com/macros/s/AKfycbz-OquXXMP6pyDD0ik2yNkWX6K97ADbcZAUw6ZhXVnkukmrLpJU6igQTR7u9CRI6g5C/exec?name=${encodeURIComponent(name)}&jumlah=${encodeURIComponent(jumlahOrang)}&status=${encodeURIComponent(status)}&message=${encodeURIComponent(message)}`;
     
 
     fetch(url, {
@@ -258,7 +258,6 @@ function renderRSVPPage(data, page) {
     const pageData = data.slice(start, end);
 
     pageData.forEach((rsvp, index) => {
-        console.log(rsvp);
         if (!rsvp.Nama && !rsvp.Ucapan) {
             const html = `
                 <div class="rsvp-item">
@@ -330,8 +329,8 @@ function loadRSVPData() {
     };
 
     getSheetData({
-        sheetID: "1SBY8gyLY4bW09OEW-idpEprVD2yTK7MnkeHgbq-mjjU",
-        sheetName: "Daftar Hadir",
+        sheetID: "1YtNC2Md04n2iHl4ZYAsCnt0PnZAzhBpqlJ5J0Sbv9kI",
+        sheetName: "Daftar Hadir 15",
         query: "SELECT *",
         callback: sheetDataHandler,
     });
